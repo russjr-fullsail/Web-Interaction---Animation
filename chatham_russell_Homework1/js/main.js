@@ -101,7 +101,31 @@ Height and width and color are up to you.
 
 
 //Draw Star here
-
+    var theCanvas3 = document.getElementById('Canvas3');
+    if (theCanvas3 && theCanvas3.getContext){
+        var ctx3 = theCanvas3.getContext("2d");
+        if (ctx3){
+            //style
+            ctx3.fillStyle="blue";
+            ctx3.strokeStyle="black";
+            ctx3.lineWidth=3;
+            //draw star
+            ctx3.beginPath();
+            ctx3.moveTo(100,100);
+            ctx3.lineTo(150,100);
+            ctx3.lineTo(175,50);
+            ctx3.lineTo(200,100);
+            ctx3.lineTo(250,100);
+            ctx3.lineTo(210,135);
+            ctx3.lineTo(230,185);
+            ctx3.lineTo(175,150);
+            ctx3.lineTo(120,185);
+            ctx3.lineTo(140,135);
+            ctx3.closePath();
+            ctx3.stroke();
+            ctx3.fill();
+        }
+    }
 
 /*******************************************
 PART 4
@@ -116,7 +140,28 @@ Do not overlap any other object.
 ********************************************/
 
 //Draw Umbrella top here
-
+    var theCanvas4 = document.getElementById('Canvas4');
+    if (theCanvas4 && theCanvas4.getContext){
+        var ctx4 = theCanvas4.getContext("2d");
+        if (ctx4){
+            //style
+            ctx4.strokeStyle="black";
+            ctx4.fillStyle="blue";
+            ctx4.lineWidth=4;
+            ctx4.beginPath();
+            ctx4.arc(400,250,200,0,(Math.PI/180)*180,true);
+            ctx4.bezierCurveTo(200,225,250,225,250,250);
+            ctx4.bezierCurveTo(250,225,300,225,300,250);
+            ctx4.bezierCurveTo(300,225,350,225,350,250);
+            ctx4.bezierCurveTo(350,225,400,225,400,250);
+            ctx4.bezierCurveTo(400,225,450,225,450,250);
+            ctx4.bezierCurveTo(450,225,500,225,500,250);
+            ctx4.bezierCurveTo(500,225,550,225,550,250);
+            ctx4.bezierCurveTo(550,225,600,225,600,250);
+            ctx4.stroke();
+            ctx4.fill();
+        }
+    }
 /*******************************************
 PART 5
 
@@ -126,7 +171,19 @@ Draw text into your canvas.  It can said whatever you would like in any color.
 ********************************************/
 
 //Draw text here
+    var theCanvas5 = document.getElementById('Canvas5');
+    if (theCanvas5 && theCanvas5.getContext){
+     var ctx5 = theCanvas5.getContext("2d");
+     if (ctx5){
+        var text="It can said whatever you would like in any color.";
+         ctx5.fillStyle="yellow";
+         ctx5.strokeStyle="red";
+         ctx5.font="30px georgia";
+         ctx5.fillText(text,30,50);
+         ctx5.strokeText(text,30,50);
 
+     }
+    }
 /*******************************************
 PART 6
 
