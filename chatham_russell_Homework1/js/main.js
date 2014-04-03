@@ -198,7 +198,18 @@ Reminder to use the drawImage method for all 3 of the ways.
 ********************************************/
 
 //Draw images here
+    var theCanvas6 = document.getElementById('Canvas6');
+    if (theCanvas6 && theCanvas6.getContext){
+      var ctx6 = theCanvas6.getContext("2d");
+      if (ctx6){
+      var imgObj= new Image();
+          imgObj.onload = function(){
+              ctx6.drawImage(imgObj,0,0,330,109);
 
+          };
+          imgObj.src="image/logo.png";
+      }
+    }
 
 
 /*******************************************
@@ -213,5 +224,51 @@ You must use at least 3 different methods.
 ********************************************/
 
 // Draw scene here
+    var theCanvas7 = document.getElementById('Canvas7');
+    if (theCanvas7 && theCanvas7.getContext){
+     var ctx7 = theCanvas7.getContext("2d");
+     if (ctx7){
+         var theText="Home is where the Heart is!";
+         ctx7.fillStyle="Blue";
+         ctx7.strokeStyle="rgba(0,255,0,.5)";
+         ctx7.font="30px georgia";
+         ctx7.fillText(theText,30,25);
+         ctx7.strokeText(theText,30,25);
 
+         ctx7.fillStyle="red";
+         ctx7.strokeStyle="black";
+         ctx7.lineWidth=6;
+
+         ctx7.beginPath();
+         ctx7.moveTo(5,100);
+         ctx7.bezierCurveTo(5,120,100,120,100,100);
+         ctx7.stroke();
+
+         ctx7.moveTo(100,100);
+         ctx7.bezierCurveTo(100,120,200,120,200,100);
+         ctx7.stroke();
+
+         ctx7.lineTo(200,300);
+         ctx7.lineTo(5,300);
+         ctx7.lineTo(5,100);
+         ctx7.lineTo(105,50);
+         ctx7.lineTo(202,104);
+         ctx7.moveTo(15,300);
+         ctx7.lineTo(15,200);
+         ctx7.lineTo(80,200);
+         ctx7.lineTo(80,300);
+         ctx7.moveTo(100,200);
+         ctx7.lineTo(100,240);
+         ctx7.lineTo(140,240);
+         ctx7.lineTo(140,200);
+         ctx7.lineTo(96,200);
+         ctx7.stroke();
+
+         ctx7.moveTo(18,340);
+         ctx7.beginPath();
+         ctx7.arc(28,250,3,0,2*Math.PI,true);
+         ctx7.stroke();
+
+     }
+    }
 
