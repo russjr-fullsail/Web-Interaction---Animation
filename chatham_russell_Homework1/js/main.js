@@ -68,7 +68,22 @@ Use the arc method
 
 
 //Draw Circle here
+    var theCanvas2 = document.getElementById('Canvas2');
+    if(theCanvas2 && theCanvas2.getContext){
+        var ctx2 = theCanvas2.getContext("2d");
+        if (ctx2){
+            ctx2.fillStyle="rgba(255,0,0,.5)";
+            ctx2.strokeStyle="black";
+            ctx2.lineWidth=1;
 
+            ctx2.beginPath();
+            ctx2.arc(50,50,20,0,2*Math.PI,true);
+            ctx2.fill();
+            ctx2.beginPath();
+            ctx2.arc(50,50,30,0,2*Math.PI,true);
+            ctx2.stroke();
+        }
+    }
 
 
 
