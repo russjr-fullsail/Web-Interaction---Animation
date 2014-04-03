@@ -21,7 +21,10 @@ FILE SETUP
 // Link the main.js file
 // Setup the call to that canvas and get it's 2d context
 //Use Modernizr to verify that your browser supports canvas, include a fallback message
-
+*/
+if(Modernizr.canvas){
+    console.log("Canvas is Supported")
+}
 
 /*******************************************
 PART 1
@@ -35,7 +38,21 @@ Reminder - set the style first then draw.
 ********************************************/
 
 //Draw Rectangle here
-
+window.onload = function(){
+    var theCanvas1 = document.getElementById('Canvas1')
+    if(theCanvas1 && theCanvas1.getContext){
+        var ctx = theCanvas1.getContext("2d");
+        if (ctx){
+            //style
+            ctx.strokeStyle="black";
+            ctx.fillStyle="blue";
+            ctx.lineWidth=3;
+            //rectangle
+            ctx.fillRect(0,0,50,100);
+            ctx.strokeRect(0,0,50,100)
+        }
+    }
+}
 
 /*******************************************
 PART 2
