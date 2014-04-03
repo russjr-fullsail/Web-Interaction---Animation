@@ -204,7 +204,9 @@ Reminder to use the drawImage method for all 3 of the ways.
       if (ctx6){
       var imgObj= new Image();
           imgObj.onload = function(){
-              ctx6.drawImage(imgObj,0,0,330,109);
+              ctx6.drawImage(imgObj,0,0);
+              ctx6.drawImage(imgObj,0,1090,1650,544);
+              ctx6.drawImage(imgObj,220,300,400,300,0,1700,420,400);
 
           };
           imgObj.src="image/logo.png";
